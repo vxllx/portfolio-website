@@ -5,9 +5,15 @@ const typewriter = new Typewriter('#typewriter', {
     delay: 75,
 });
 
+const delay = 1500;
+
 typewriter
-    .typeString('Welcome to my terminal.')
-    .pauseFor(1000)
+    .typeString('Welcome to my Portfolio Website!')
+    .pauseFor(delay)
     .deleteAll()
-    .typeString('Explore my projects.')
-    .start();
+    .typeString('It`s made by vxllx.dev')
+    .pauseFor(delay)
+    .deleteAll()
+    .typeString('Features are coming soon!')
+    .pauseFor(delay)
+    .start()
