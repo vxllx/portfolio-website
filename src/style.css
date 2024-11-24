@@ -1,8 +1,69 @@
+/* Grundlegende Stile für den gesamten Body */
 body {
-    font-family: monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
+    background-color: #000; /* Schwarzer Hintergrund wie im Terminal */
+    color: #0f0; /* Grüner Text */
+    font-family: monospace; /* Monospace-Schriftart für Terminal-Look */
+    margin: 0; /* Entfernt Standardabstände */
+    height: 100vh; /* Höhe des Viewports */
+    display: flex; /* Flexbox für zentrierte Anordnung */
+    justify-content: center; /* Zentriert horizontal */
+    align-items: center; /* Zentriert vertikal */
+  }
+  
+  /* Terminal-Container */
+  #terminal {
+    background-color: #000; /* Hintergrund bleibt schwarz */
+    width: 80%; /* Terminal nimmt 80% der Breite ein */
+    max-width: 800px; /* Maximale Breite für größere Bildschirme */
+    height: 80%; /* Terminal nimmt 80% der Höhe ein */
+    display: flex; /* Flexbox für Layout */
+    flex-direction: column; /* Inhalte vertikal anordnen */
+    border: 1px solid #0f0; /* Grüner Rand um das Terminal */
+    overflow: hidden; /* Verhindert, dass Inhalte über den Rand hinausgehen */
+  }
+  
+  /* Ausgabebereich des Terminals */
+  #output {
+    flex: 1; /* Nimmt den gesamten Platz oberhalb der Eingabe ein */
+    overflow-y: auto; /* Scrollbar hinzufügen, wenn der Inhalt zu groß wird */
+    padding: 10px; /* Abstand innerhalb des Bereichs */
+    box-sizing: border-box; /* Padding wird in die Breite/Höhe eingerechnet */
+    white-space: pre-wrap; /* Zeilenumbrüche im Text erlauben */
+    font-size: 1rem; /* Textgröße */
+    line-height: 1.5; /* Zeilenhöhe für bessere Lesbarkeit */
+  }
+  
+  #commandline {
+    display: flex; /* Flexbox für horizontale Anordnung */
+    flex-direction: column;
+    align-items: left; /* Zentriert den Text vertikal */
+    border-top: 1px solid #0f0; /* Dünne grüne Linie über dem Eingabebereich */
+    padding: 10px; /* Abstand innerhalb des Bereichs */
+    box-sizing: border-box; /* Padding wird in die Breite/Höhe eingerechnet */
+  }
+
+  /* Eingabebereich des Terminals */
+  #input-container {
+    display: flex; /* Flexbox für horizontale Anordnung */
+    align-items: center; /* Zentriert den Text vertikal */
+    box-sizing: border-box; /* Padding wird in die Breite/Höhe eingerechnet */
+  }
+  
+  /* Befehls-Prompt vor der Eingabe */
+  .prompt {
+    margin-right: 10px; /* Abstand zwischen Prompt und Eingabefeld */
+    color: #0f0; /* Grüner Text */
+  }
+  
+  /* Eingabefeld */
+  #command-input {
+    background-color: #000; /* Keine Hintergrundfarbe */
+    border: none; /* Keine sichtbare Umrandung */
+    color: #0f0; /* Grüner Text */
+    flex: 1; /* Nimmt den gesamten verfügbaren Platz ein */
+    outline: none; /* Keine Umrandung beim Fokussieren */
+    font-family: monospace; /* Monospace-Schriftart */
+    font-size: 1rem; /* Textgröße */
+    caret-color: #0f0; /* Grüner Cursor */
+  }
+  
