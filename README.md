@@ -8,3 +8,6 @@
  Along JavaScript, CSS and HTML, the Node Package Manager (npm) is used.
  npm is needed to use vite.
  -eslint may be added-
+
+# visit the website
+https://vxllx.github.io/portfolio-website/
