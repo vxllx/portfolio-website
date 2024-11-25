@@ -19,17 +19,19 @@ document.addEventListener('DOMContentLoaded', () => {
         // Befehlsverarbeitung
         switch (command.toLowerCase()) {
             case 'help':
-                addOutput(' List of all available commands: \n  help Lists all available commands\n echo Prints the input\n clear Clears the terminal \n ');
+                addOutput('List of all available commands: \nabout\nhelp\nprojects\nwhois\n ');
                 break;
-            case 'clear':
-                clearOutput();
+            case 'about':
+                addOutput('This website is about my software engineering projects.\n ');
+                break;
+            case 'whois':
+                addOutput('Hey I´m Valentin!\nI am an 21 y.o. dual Student at Nordakademie Elmshorn in cooperation with MaibornWolff Hamburg. \nOn this Website you get a look of my experience in software engineering!\n ');
+                break;
+            case 'projects':
+                addOutput('This is a list of my projects.\n ');
                 break;
             default:
-                if (command.startsWith('    echo ')) {
-                    addOutput(command.slice(5)); // Gibt den Text nach "echo " aus
-                } else {
-                    addOutput(` Unbekannter Befehl: ${command}\n `);
-                }
+                addOutput(`Unbekannter Befehl: ${command}\n `);
         }
     }
 
@@ -37,10 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const line = document.createElement('div');
         line.textContent = text;
         output.appendChild(line);
-        output.scrollTop = output.scrollHeight; // Scrollt nach unten
-    }
-
-    function clearOutput() {
-        output.innerHTML = '';
+        output.scrollTop = output.scrollHeight;
     }
 });
