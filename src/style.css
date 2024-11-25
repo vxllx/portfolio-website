@@ -14,7 +14,7 @@ body {
   #terminal {
     background-color: #000; /* Hintergrund bleibt schwarz */
     width: 80%; /* Terminal nimmt 80% der Breite ein */
-    max-width: 800px; /* Maximale Breite für größere Bildschirme */
+    max-width: 1000px; /* Maximale Breite für größere Bildschirme */
     height: 80%; /* Terminal nimmt 80% der Höhe ein */
     display: flex; /* Flexbox für Layout */
     flex-direction: column; /* Inhalte vertikal anordnen */
@@ -58,7 +58,7 @@ body {
   #command-input {
     background-color: #000;
     border: none;
-    color: red; 
+    color: lightpink; 
     flex: 1; 
     outline: none; 
     font-family: monospace; 
